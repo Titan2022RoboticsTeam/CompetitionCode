@@ -34,11 +34,10 @@
 //    		shooterSubsystem.setSpeed(-0.2);;
 //    	}
 //    	else{
-//    		shooterSubsystem.setHingeSpeed(0);
+//    		shooterSubsystem.setSpeed(0);
 //    	}
 //    	
-//    	
-//    	
+//    	shooterSubsystem.setHingeSpeed(oi.attack3.getY());
 //    }
 //
 //    // Make this return true when this Command no longer needs to run execute()
