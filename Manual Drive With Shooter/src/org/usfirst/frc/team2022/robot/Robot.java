@@ -1,6 +1,8 @@
 package org.usfirst.frc.team2022.robot;
 import org.usfirst.frc.team2022.robot.commands.DriveCommand;
+import org.usfirst.frc.team2022.robot.commands.ShooterCommand;
 import org.usfirst.frc.team2022.robot.subsystems.DriveSubsystem;
+import org.usfirst.frc.team2022.robot.subsystems.ShooterSubsystem;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -23,14 +25,14 @@ public class Robot extends IterativeRobot {
 	 */
 	
 	
-//	public static final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
+	public static final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
 	public static final DriveSubsystem driveSubsystem = new DriveSubsystem();
 	public static final OI oi = new OI();
-//	ShooterCommand shooterCommand;
+	ShooterCommand shooterCommand;
 	DriveCommand driveCommand;
 	@Override
 	public void robotInit() {
-//		shooterCommand = new ShooterCommand();
+		shooterCommand = new ShooterCommand();
     	driveCommand = new DriveCommand();
 	}
 
@@ -55,7 +57,7 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void teleopInit() {
-//		shooterCommand.start();
+		shooterCommand.start();
 		driveCommand.start();
 	}
 
@@ -65,7 +67,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void disabledInit() {
-//		shooterCommand.cancel();
+		shooterCommand.cancel();
 		driveCommand.cancel();
 		//
 	}
